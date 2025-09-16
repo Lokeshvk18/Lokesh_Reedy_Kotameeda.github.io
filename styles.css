@@ -5,24 +5,53 @@ body {
     margin: 0;
     line-height: 1.6;
     color: #e0e0e0;
-    background-color: #121212;
+    background-color: #0d0d0d;
+}
+
+.animated-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        45deg,
+        rgba(255, 0, 0, 0.1) 0%,
+        rgba(255, 0, 0, 0.05) 50%,
+        rgba(255, 0, 0, 0.1) 100%
+    ),
+    radial-gradient(
+        circle,
+        rgba(255, 0, 0, 0.05) 0%,
+        rgba(255, 0, 0, 0) 70%
+    );
+    background-size: 200% 200%;
+    animation: background-pan 20s ease-in-out infinite;
+    z-index: -1;
+}
+
+@keyframes background-pan {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 header {
-    background: #1e1e1e;
+    background: rgba(30, 30, 30, 0.8);
     color: #fff;
     padding: 3rem 0;
     text-align: center;
     border-bottom: 2px solid #333;
     position: relative;
+    z-index: 1;
 }
 
 .profile-photo {
     width: 160px;
     height: 160px;
     border-radius: 50%;
-    border: 4px solid #3498db;
-    box-shadow: 0 0 15px rgba(52, 152, 219, 0.5);
+    border: 4px solid #e74c3c;
+    box-shadow: 0 0 15px rgba(231, 76, 60, 0.5);
     object-fit: cover;
     margin-bottom: 1rem;
     animation: fadeIn 1s ease-in-out;
@@ -67,7 +96,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #3498db;
+    color: #e74c3c;
     transform: translateY(-3px);
 }
 
@@ -75,15 +104,18 @@ section {
     padding: 4rem 1rem;
     margin: 2rem auto;
     max-width: 1000px;
-    background: #1e1e1e;
+    background: rgba(30, 30, 30, 0.8);
+    backdrop-filter: blur(10px);
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
     border: 1px solid #333;
+    position: relative;
+    z-index: 1;
 }
 
 h2 {
     text-align: center;
-    color: #3498db;
+    color: #e74c3c;
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 3rem;
     position: relative;
@@ -95,7 +127,7 @@ h2:after {
     display: block;
     width: 80px;
     height: 4px;
-    background: #3498db;
+    background: #e74c3c;
     margin: 10px auto 0;
 }
 
@@ -134,7 +166,7 @@ ul {
 }
 
 .skill-category li:hover {
-    background: #3498db;
+    background: #e74c3c;
 }
 
 .download-button {
@@ -143,7 +175,7 @@ ul {
     margin: 30px auto 0;
     padding: 15px 25px;
     text-align: center;
-    background: #3498db;
+    background: #e74c3c;
     color: #fff;
     text-decoration: none;
     border-radius: 50px;
@@ -153,15 +185,23 @@ ul {
 }
 
 .download-button:hover {
-    background: #2980b9;
+    background: #c0392b;
     transform: translateY(-5px);
 }
 
 footer {
     text-align: center;
     padding: 2rem 0;
-    background: #1e1e1e;
+    background: rgba(30, 30, 30, 0.8);
     color: #e0e0e0;
     margin-top: 2rem;
     border-top: 1px solid #333;
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    header h1 { font-size: 2rem; }
+    header p { font-size: 1.1rem; }
+    nav a { font-size: 1rem; }
 }
