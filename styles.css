@@ -16,14 +16,14 @@ body {
     height: 100%;
     background: linear-gradient(
         45deg,
-        rgba(255, 0, 0, 0.1) 0%,
-        rgba(255, 0, 0, 0.05) 50%,
-        rgba(255, 0, 0, 0.1) 100%
+        rgba(52, 152, 219, 0.1) 0%,
+        rgba(52, 152, 219, 0.05) 50%,
+        rgba(52, 152, 219, 0.1) 100%
     ),
     radial-gradient(
         circle,
-        rgba(255, 0, 0, 0.05) 0%,
-        rgba(255, 0, 0, 0) 70%
+        rgba(52, 152, 219, 0.05) 0%,
+        rgba(52, 152, 219, 0) 70%
     );
     background-size: 200% 200%;
     animation: background-pan 20s ease-in-out infinite;
@@ -50,8 +50,8 @@ header {
     width: 160px;
     height: 160px;
     border-radius: 50%;
-    border: 4px solid #e74c3c;
-    box-shadow: 0 0 15px rgba(231, 76, 60, 0.5);
+    border: 4px solid #3498db;
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.5);
     object-fit: cover;
     margin-bottom: 1rem;
     animation: fadeIn 1s ease-in-out;
@@ -96,7 +96,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #e74c3c;
+    color: #3498db;
     transform: translateY(-3px);
 }
 
@@ -115,7 +115,7 @@ section {
 
 h2 {
     text-align: center;
-    color: #e74c3c;
+    color: #3498db;
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 3rem;
     position: relative;
@@ -127,7 +127,7 @@ h2:after {
     display: block;
     width: 80px;
     height: 4px;
-    background: #e74c3c;
+    background: #3498db;
     margin: 10px auto 0;
 }
 
@@ -166,7 +166,7 @@ ul {
 }
 
 .skill-category li:hover {
-    background: #e74c3c;
+    background: #3498db;
 }
 
 .download-button {
@@ -175,7 +175,7 @@ ul {
     margin: 30px auto 0;
     padding: 15px 25px;
     text-align: center;
-    background: #e74c3c;
+    background: #3498db;
     color: #fff;
     text-decoration: none;
     border-radius: 50px;
@@ -185,7 +185,7 @@ ul {
 }
 
 .download-button:hover {
-    background: #c0392b;
+    background: #2980b9;
     transform: translateY(-5px);
 }
 
